@@ -61,8 +61,7 @@ namespace Gr44HappyCake.Tests.Models
 
             // Assert
             Assert.False(cakeNotDone);
-            Assert.False(false);
-            Assert.False(testCake.BakedAndDone);
+            Assert.Equal(testCake.BakedAndDone, result);    
         }
 
     }
