@@ -26,12 +26,19 @@ namespace Gr44HappyCake.Models
 
         public bool BakeTheCake(double temperature,TimeSpan bakeTime)
         {
+            if (temperature > (tempReq * 2) && this.bakeTime < (bakeTime * 2)) // Remember that you have the operators right
+            {
+                throw new Exception("Time and tempeture were too high so you have burnt your cake!");
+            }
             if (temperature >= tempReq && this.bakeTime >= bakeTime)
             {
                 bakedAndDone = true; 
                 return true;
             }
-            else { return false; }
+            else 
+            { 
+                return false; 
+            }
         }
     }
 
